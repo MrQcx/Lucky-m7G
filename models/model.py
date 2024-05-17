@@ -67,13 +67,13 @@ class PositionalEncoding(nn.Module):
 
         return self.encoding[:x.shape[1], :].cuda()
 
-class Lucky(nn.Module):
+class Master(nn.Module):
     def __init__(self, kernel_num, topk):
         """
         Parameters
         ----------
         """
-        super(Lucky, self).__init__()
+        super(Master, self).__init__()
         self.kernel_num = kernel_num
         self.topk = topk
         self.detect_word = nn.Sequential(
